@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redirection vers Eidel</title>
+<meta name="robots" content="noindex">
+<script>
+  // Toute adresse inconnue de www.eidel.app part vers l'application, avec le même chemin.
+  // Exemple : www.eidel.app/connexion → https://eidel.app/connexion
+  location.replace("https://eidel.app" + location.pathname + location.search + location.hash);
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://eidel.app/"></noscript>
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#FFFBF9;color:#3A2337;font:17px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;text-align:center;padding:24px}
+  a{color:#7B3A6C;font-weight:600}
+</style>
+</head>
+<body>
+  <p>Redirection vers l'application Eidel…<br><a href="https://eidel.app/" id="lien">Continuer vers eidel.app</a></p>
+  <script>document.getElementById("lien").href = "https://eidel.app" + location.pathname + location.search + location.hash;</script>
+</body>
+</html>
